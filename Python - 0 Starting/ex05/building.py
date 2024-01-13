@@ -55,6 +55,5 @@ def main():
         exit(1)
 
 
-# Main
 if __name__ == "__main__":
     main()
