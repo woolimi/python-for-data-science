@@ -1,17 +1,13 @@
-def is_number(value):
+def _is_number(value: int | float) -> bool:
     """
     Get value and return
     """
     return isinstance(value, int) or isinstance(value, float)
 
 
-def give_bmi(height, weight):
+def give_bmi(height: list[int | float],
+             weight: list[int | float]) -> list[int | float]:
     """
-    def give_bmi(
-        height: list[int | float],
-        weight: list[int | float]
-    ) -> list[int | float]
-
     Get list of height and weight as arguments, then return list of bmi
     """
     try:
@@ -23,20 +19,28 @@ def give_bmi(height, weight):
             raise Exception("list of height and weight are different")
         res = []
         for idx in range(len(height)):
-            if not isinstance(weight[idx], int) and isinstance(weight[idx], float):
+            if not _is_number(weight[idx]):
                 raise Exception("")
-            if not isinstance(height[idx], int) and isinstance(height[idx], float):
+            if not _is_number(height[idx]):
                 raise Exception("")
             bmi = weight[idx] / (height[idx] ** 2)
-            res.push(bmi)
+            res.append(bmi)
         return res
 
     except Exception as e:
         print(e)
 
-def apply_limit(bmi, limit):
+
+def apply_limit(bmi: list[int | float], limit: int | float) -> list[bool]:
+    """
+    check if bmi is greater than limit
+    """
     try:
         if not isinstance(bmi, list):
             raise Exception("bmi should be a list")
+        if not _is_number(limit):
+            return Exception("limit should be a number")
+        return list(map(lambda x: x > limit, bmi))
+
     except Exception as e:
         print(e)

@@ -21,7 +21,7 @@ def str_to_morse(text):
 
 def main():
     """
-    a program that takes a string as an argument 
+    a program that takes a string as an argument
     and encodes it into Morse Code.
     """
     try:
