@@ -7,7 +7,7 @@ class King(Baratheon, Lannister):
     """
     def __init__(self, first_name: str, is_alive=True):
         super().__init__(first_name, is_alive)
-    
+
     def set_eyes(self, color):
         self.eyes = color
 

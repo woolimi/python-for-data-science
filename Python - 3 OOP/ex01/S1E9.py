@@ -21,6 +21,7 @@ class Character(ABC):
         """Character __repr__ method"""
         return self.__str__()
 
+
 class Stark(Character):
     """Stark Class"""
     def __init__(self, first_name: str, is_alive=True):

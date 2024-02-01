@@ -1,6 +1,6 @@
 def callLimit(limit: int):
     """
-    Wrapper function that return a decorator "callLimiter"    
+    Wrapper function that return a decorator "callLimiter"
     """
     count = 0
 

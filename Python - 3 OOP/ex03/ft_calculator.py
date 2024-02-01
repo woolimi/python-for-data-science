@@ -3,7 +3,7 @@ class calculator:
 
     def __init__(self, vector):
         self.vector = vector
-    
+
     def __add__(self, object) -> None:
         self.vector = [x + object for x in self.vector]
         print(self.vector)

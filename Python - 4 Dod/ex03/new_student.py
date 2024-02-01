@@ -11,7 +11,7 @@ def generate_id() -> str:
 @dataclass
 class Student:
     """
-    Student class with dataclass    
+    Student class with dataclass
     """
     name: str = field()
     surname: str = field()
