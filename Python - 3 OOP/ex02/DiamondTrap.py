@@ -2,9 +2,7 @@ from S1E7 import Baratheon, Lannister
 
 
 class King(Baratheon, Lannister):
-    """
-    Class King
-    """
+    """Class King"""
     def __init__(self, first_name: str, is_alive=True):
         super().__init__(first_name, is_alive)
 
