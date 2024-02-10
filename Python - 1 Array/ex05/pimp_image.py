@@ -14,6 +14,9 @@ def ft_invert(array: np.ndarray) -> np.ndarray:
     """
     Inverts the color of the image received.
     """
+    if array is None:
+        print("Invalid image")
+        return None
     img = 255 - array
     return _show_image(img)
 
@@ -22,6 +25,9 @@ def ft_red(array: np.ndarray) -> np.ndarray:
     """
     Red color of the image received.
     """
+    if array is None:
+        print("Invalid image")
+        return None
     img = array.copy()
     for row in img:
         for el in row:
@@ -34,6 +40,9 @@ def ft_green(array: np.ndarray) -> np.ndarray:
     """
     Green color of the image received.
     """
+    if array is None:
+        print("Invalid image")
+        return None
     img = array.copy()
     for row in img:
         for el in row:
@@ -46,6 +55,9 @@ def ft_blue(array: np.ndarray) -> np.ndarray:
     """
     Green color of the image received.
     """
+    if array is None:
+        print("Invalid image")
+        return None
     img = array.copy()
     for row in img:
         for el in row:
@@ -58,6 +70,9 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
     """
     Gray color of the image received.
     """
+    if array is None:
+        print("Invalid image")
+        return None
     img = array.copy()
     for row in img:
         for el in row:

@@ -1,4 +1,4 @@
-def NULL_not_found(object):
+def NULL_not_found(object: any) -> int:
     if object is None:
         print(f"Nothing: {object} {type(object)}")
     elif type(object) is float and object != object:

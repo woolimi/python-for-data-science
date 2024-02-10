@@ -48,6 +48,7 @@ def main():
     plt.xlabel("Year")
     plt.xticks(range(years[0], 2051, 40))
     plt.xlim(years[0], 2051)
+    plt.ylabel("Population")
     y_ticks = [i * 1e6 for i in range(20, int(maxY + 1), 20)]
     plt.yticks(y_ticks, ["{:,.0f}M".format(pop / 1e6) for pop in y_ticks])
     plt.legend()

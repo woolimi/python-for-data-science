@@ -23,10 +23,10 @@ def format_time(seconds):
     return f"{int(minutes):02d}:{int(seconds):02d}"
 
 
-def ft_tqdm(lst):
+def ft_tqdm(lst: range):
     """
     Decorate an iterable object, returning an iterator which acts exactly like
-    the original iterable, but prints a dynamically updating progressbar
+    the original iterable, but prints a dynamically updating progress bar
     every time a value is requested.
     """
     total = len(lst)

@@ -1,14 +1,18 @@
 def _is_number(value: int | float) -> bool:
     """
-    Get value and return
+    Check if value is a number
+    return False if value is nan
     """
-    return isinstance(value, int) or isinstance(value, float)
+    return (
+        isinstance(value, int) or
+        (isinstance(value, float) and value == value))
 
 
 def give_bmi(height: list[int | float],
              weight: list[int | float]) -> list[int | float]:
     """
-    Get list of height and weight as arguments, then return list of bmi
+    Get list of height and weight as arguments,
+    calculate BMI and return list
     """
     try:
         if not isinstance(height, list):
@@ -20,9 +24,9 @@ def give_bmi(height: list[int | float],
         res = []
         for idx in range(len(height)):
             if not _is_number(weight[idx]):
-                raise Exception("")
+                raise Exception("Invalid number")
             if not _is_number(height[idx]):
-                raise Exception("")
+                raise Exception("Invalid number")
             bmi = weight[idx] / (height[idx] ** 2)
             res.append(bmi)
         return res

@@ -1,4 +1,4 @@
-def all_thing_is_obj(object):
+def all_thing_is_obj(object: any) -> int:
     if isinstance(object, list):
         print(f"List : {type(object)}")
     elif isinstance(object, tuple):

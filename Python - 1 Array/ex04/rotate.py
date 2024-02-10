@@ -51,7 +51,7 @@ def _transpose(img: np.ndarray) -> np.ndarray:
     It's an operation which flips a matrix over its diagonal
     """
     rows, cols = len(img), len(img[0])
-    return [[img[j][i] for j in range(rows)] for i in range(cols)]
+    return np.array([[img[j][i] for j in range(rows)] for i in range(cols)])
 
 
 def main():
@@ -60,6 +60,8 @@ def main():
     """
     try:
         original_image = ft_load("animal.jpeg")
+        if original_image is None:
+            return
         edited_image = _crop(original_image, (440, 100), 400)
         edited_image = _grayscale(edited_image)
         edited_image = _transpose(edited_image)

@@ -51,6 +51,8 @@ def main():
     """
     try:
         original_image = ft_load("animal.jpeg")
+        if original_image is None:
+            return
         edited_image = _crop(original_image, (440, 100), 400)
         edited_image = _grayscale(edited_image)
 
